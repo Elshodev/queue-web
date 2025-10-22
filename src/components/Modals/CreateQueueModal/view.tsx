@@ -230,7 +230,7 @@ const CreateQueueModal = ({ service, onCancel }: Props) => {
         {/* Time Selection */}
         {selectedDay && (
           <Form.Item label={t("selectDate")} required>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid lg:grid-cols-4 grid-cols-3 gap-2">
               {timeSlots.map((timeSlot: string, idx: number) => (
                 <div
                   key={idx}
