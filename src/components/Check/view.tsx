@@ -39,13 +39,15 @@ const Check = () => {
 
   const [printLoading, setPrintLoading] = useState(true);
   let document = <PdfCheck check={check} />;
+  
   const [instance, updateInstance] = usePDF({ document });
   const refreshPDF = () => {
     updateInstance(document);
   };
-
+  
   const handlePrint = () => {
-    const url = instance.url;
+    console.log(instance);
+    const url = instance?.url;
     if (url) {
       window.open(url, "_blank");
     }
@@ -66,15 +68,9 @@ const Check = () => {
     <div className="check">
       <div className="check-welcome">{t("welcome")}!</div>
       <div className="check-qr-block">
-        <div>
-          <div>{t("queue_number")}:</div>
-          <div className="check-id">
-            {check?.prefix}
-            {check?.queue}
-          </div>
-        </div>
+
         <div className="qr">
-          <QRCode value={`${check?.prefix}${check?.queue} ${check?.id}`} />
+          <QRCode size={220} value={`${check.servierId} ${check?.id}`} />
         </div>
       </div>
       <div className="strong">

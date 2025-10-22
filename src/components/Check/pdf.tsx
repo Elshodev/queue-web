@@ -80,13 +80,6 @@ const PdfCheck = ({ check }: Props) => {
             <View>
               <Text style={styles.welcome}>{t("welcome")}</Text>
               <View style={styles.qrcodeBlock}>
-                <View>
-                  <Text style={styles.font}>{t("queue_number")}</Text>
-                  <Text style={styles.queue}>
-                    {check?.prefix}
-                    {check?.queue}
-                  </Text>
-                </View>
                 {check?.id && check?.qrCode && (
                   <Image
                     style={styles.image}

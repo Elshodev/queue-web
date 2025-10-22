@@ -131,7 +131,7 @@ const CreateQueueModal = ({ service, onCancel }: Props) => {
           if (res) {
             form.resetFields();
             // Generate QR code and include it in check data
-            generateQRCode(`${res.prefix}${res.queue} ${res.id}`)
+            generateQRCode(`${res.servierId} ${res?.id}`)
               .then((qrCodeDataURL) => {
                 if (qrCodeDataURL) {
                   // Extract base64 data from data URL
