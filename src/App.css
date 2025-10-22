@@ -1,0 +1,70 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --body: #e5f3fd;
+  --footer: #2a2b36;
+  --purple: #5960fe;
+  --darkBlue: #000d84;
+  --lightPurple: rgba(89, 96, 254, 0.13);
+  --red: #ff0000;
+  --gray: #b5b5b5;
+  --textGray: #d9d9d9;
+  --warning: #ff1f1f;
+  --green: #22bc79;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--white);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  font-family: "Monsterrat SemiBold";
+  font-size: 15px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  min-width: 95%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ant-btn-primary {
+  background: var(--purple) !important;
+}
+
+.ant-btn-primary span {
+  color: var(--white) !important;
+}
+
+.ant-btn-default span {
+  color: var(--purple) !important;
+}
+
+button span {
+  font-family: "Monsterrat Bold" !important;
+}
+
+button svg {
+  fill: #fff;
+}
+
+@media (min-width: 1280px) {
+  .center-column {
+    grid-column: 2 / 3 !important;
+  }
+}
