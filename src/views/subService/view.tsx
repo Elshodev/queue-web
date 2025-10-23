@@ -24,15 +24,16 @@ const SubService = () => {
   const [category, setCategory] = useState<ServiceCardType | null>();
   useEffect(() => {
     if (modals?.queue) {
-      openModal("queue");
+      closeModal("queue");
     }
     if (modals?.queueOvir) {
-      openModal("queueOvir");
+      closeModal("queueOvir");
     }
-  }, [modals]);
+  }, []);
   if (isLoading) {
     return <Loading loading={true} />;
   }
+  
   return (
     <>
       <div className="wrapper h-full">
@@ -59,7 +60,7 @@ const SubService = () => {
           <BackBtn />
         </div>
       </div>
-      {modals?.queue &&<Modal
+      {modals?.queue && <Modal
         open={modals?.queue}
         onCancel={() => closeModal("queue")}
         centered
@@ -67,7 +68,7 @@ const SubService = () => {
       >
         <Check />
       </Modal>}
-      {modals?.queueOvir &&<Modal
+      {modals?.queueOvir && <Modal
         open={modals?.queueOvir}
         onCancel={() => closeModal("queueOvir")}
         centered
