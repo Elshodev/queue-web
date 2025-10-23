@@ -6,7 +6,7 @@ import {
   CreateQueueModal,
   Loading,
 } from "../../components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "antd";
 import { useTranslation } from "react-i18next";
 import { modalsStore } from "../../store";
@@ -22,6 +22,14 @@ const SubService = () => {
   const { modals, closeModal, openModal } = modalsStore();
   const { categories, isLoading } = useCategories(type);
   const [category, setCategory] = useState<ServiceCardType | null>();
+  useEffect(() => {
+    if (modals?.queue) {
+      openModal("queue");
+    }
+    if (modals?.queueOvir) {
+      openModal("queueOvir");
+    }
+  }, [modals]);
   if (isLoading) {
     return <Loading loading={true} />;
   }
