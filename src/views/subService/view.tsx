@@ -29,6 +29,8 @@ const SubService = () => {
     if (modals?.queueOvir) {
       closeModal("queueOvir");
     }
+    if(category) {
+    setCategory(null)}
   }, []);
   if (isLoading) {
     return <Loading loading={true} />;
