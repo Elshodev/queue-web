@@ -36,7 +36,7 @@ const SubService = () => {
   return (
     <>
       <div className="wrapper h-full">
-        <div className="flex flex-col h-full max-md:pb-12">
+        <div className="flex flex-col h-full">
           <div className="text-center md:text-[200%] text-[17px] mb-4">
             {t("select_category")}
           </div>

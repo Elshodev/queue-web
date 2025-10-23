@@ -9,7 +9,7 @@ const BackBtn = () => {
   return (
     <div onClick={() => navigate(-1)}>
       <Button
-        className="mb-4 max-md:hidden uppercase py-[12px] h-[auto] flex items-center justify-center !bg- w-max"
+        className="mb-4 uppercase py-[12px] h-[auto] flex items-center justify-center !bg- w-max"
         type="primary"
       >
         <ArrowLeftOutlined className="mr-auto [&>svg]:text-[100%]" />
