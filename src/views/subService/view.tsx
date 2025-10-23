@@ -51,22 +51,22 @@ const SubService = () => {
           <BackBtn />
         </div>
       </div>
-      <Modal
+      {modals?.queue &&<Modal
         open={modals?.queue}
         onCancel={() => closeModal("queue")}
         centered
         footer={null}
       >
         <Check />
-      </Modal>
-      <Modal
+      </Modal>}
+      {modals?.queueOvir &&<Modal
         open={modals?.queueOvir}
         onCancel={() => closeModal("queueOvir")}
         centered
         footer={null}
       >
         <CheckOvir />
-      </Modal>
+      </Modal>}
       {category && (
         <CreateQueueModal
           onCancel={() => {
