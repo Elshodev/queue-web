@@ -29,13 +29,14 @@ const SubService = () => {
     if (modals?.queueOvir) {
       closeModal("queueOvir");
     }
-    if(category) {
-    setCategory(null)}
+    if (category) {
+      setCategory(null)
+    }
   }, []);
   if (isLoading) {
     return <Loading loading={true} />;
   }
-  
+
   return (
     <>
       <div className="wrapper h-full">
